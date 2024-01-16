@@ -15,4 +15,3 @@ jobs:
       azureSubscriptionId: ${{ vars.SANDBOX_AZURE_SUBSCRIPTION_ID }}
       azureClientId: ${{ vars.SANDBOX_AZURE_CLIENT_ID }}
       azureTenantId: ${{ vars.SANDBOX_AZURE_TENANT_ID }}
-      # 
