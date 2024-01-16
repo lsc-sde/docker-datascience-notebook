@@ -10,10 +10,8 @@ jobs:
   build:
     uses: lsc-sde/lsc-sde/.github/workflows/acr-build.yaml@main
     with:
-      azureKeyvault: ${{ vars.sandbox_az_keyvault }}
       repository: datascience
       imageName: datascience-notebook
-      # 
-    secrets:
-      azureCredentials: ${{ secrets.sandbox_az_credentials }}
-      
+      azureSubscriptionId: ${{ vars.SANDBOX_AZURE_SUBSCRIPTION_ID }}
+      azureClientId: ${{ vars.SANDBOX_AZURE_CLIENT_ID }}
+      azureTenantId: ${{ vars.SANDBOX_AZURE_TENANT_ID }}
