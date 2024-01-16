@@ -8,6 +8,8 @@ on:
 
 jobs:
   build:
+    runs-on: 
+      group: github-actions-runner-k8s
     uses: lsc-sde/lsc-sde/.github/workflows/acr-build.yaml@main
     with:
       azureKeyvault: ${{ vars.sandbox_az_keyvault }}
