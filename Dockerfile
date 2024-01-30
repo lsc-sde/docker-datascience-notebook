@@ -1,6 +1,6 @@
 # Custom data science notebook for LANDER
 ARG OWNER=vvcb
-ARG BASE_CONTAINER=jupyter/datascience-notebook:2023-01-09
+ARG BASE_CONTAINER=jupyter/datascience-notebook:2023-10-20
 FROM $BASE_CONTAINER
 
 LABEL maintainer="vvcb"
