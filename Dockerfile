@@ -11,6 +11,7 @@ COPY jupyter_notebook_config.json /etc/jupyter/jupyter_notebook_config.json
 COPY environment.yaml environment.yaml
 
 FROM base as updated
+RUN rm /opt/conda/pkgs/*.json
 RUN mamba update --all --yes
 
 FROM updated as configured 
