@@ -9,11 +9,11 @@ LABEL image="datascience-notebook"
 COPY jupyter_notebook_config.json /etc/jupyter/jupyter_notebook_config.json
 # COPY overrides.json ${CONDA_DIR}/share/jupyter/lab/settings/overrides.json
 COPY environment.yaml environment.yaml
-RUN mamba update --all --yes \ 
-    && mamba env update --name base --file environment.yaml \
-    && mamba clean --all -f -y \
-    && rm environment.yaml \
-    && fix-permissions "${CONDA_DIR}" \
-    && fix-permissions "/home/${NB_USER}"
+RUN mamba update --all --yes
+RUN mamba env update --name base --file environment.yaml 
+RUN mamba clean --all -f -y
+RUN rm environment.yaml
+RUN fix-permissions "${CONDA_DIR}"
+RUN fix-permissions "/home/${NB_USER}"
 
 USER ${NB_USER}
